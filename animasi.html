@@ -1,0 +1,73 @@
+<!--untuk menampilkan pesan-->
+<script type="text/javascript">
+function showDiv(toggle){
+document.getElementById(toggle).style.display = 'block';
+}
+</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Style untuk CSS-->
+	<style>
+		.container{
+		border:0px solid rgba(0,0,0,.5);
+		width: 400px;
+		height: 200px;
+		background:"";
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -140px;
+		margin-left: -240px;
+		text-align: center;
+		padding:40px;
+		display: table;
+		}
+
+		.box{
+		background:"";   
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		border:0px solid rgba(0,0,0,.2);}
+
+		input[type=button]{
+		font-family: poppins;
+	    font-size: 15px;
+	    background: #22a4cf;
+	    color: white;
+	    border: white 3px solid;
+	    border-radius: 5px;
+	    padding: 12px 20px;
+	    margin-top: 10px;
+		}
+
+		.animasi{
+			color: #22a4cf;
+			font-size: 28px;
+			width: 379px;
+			white-space:nowrap;
+			overflow:hidden;
+			animation: ketik 2s steps(40, end);
+		}
+
+		@keyframes ketik{
+				from { width: 0; }
+		}
+
+		@-webkit-keyframes ketik{
+				from { width: 0; }
+		}
+	</style>
+<title>Animasi</title>
+</head>
+<!--Konten-->
+<body>
+	<div class="container">
+		<div class="box">
+		<strong><div class="animasi" id="toggle" style="display:none">27 Hari Lagi Menuju Lebaran</div></strong>
+		<input type="button" name="answer" onclick="showDiv('toggle')" value="RAMADHAN 2021"/></div>
+	</div>
+</body>
+</html>
